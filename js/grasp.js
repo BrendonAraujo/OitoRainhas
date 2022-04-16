@@ -1,13 +1,28 @@
 function iniciar(){
     var receba,rainha;
-    
-    var posicao_inicial = Math.floor(Math.random() * (64 - 1) + 1);
+    var posicao;
+    var quant_rainhas = 1;
 
-    receba = document.getElementById(posicao_inicial);
-    rainha = document.getElementById('r'+1);
-    receba.insertAdjacentElement("beforeend",rainha);
+    while (quant_rainhas < 9){
+        posicao = Math.floor(Math.random() * (64 - 1) + 1);
+        receba = document.getElementById(posicao);
+        if(!possuiuRainha(posicao)){
+            rainha = document.getElementById('r'+quant_rainhas);
+            receba.insertAdjacentElement("beforeend",rainha);
+            receba.setAttribute('value',1);
+            quant_rainhas = quant_rainhas + 1;
+        }
+        
+    } 
+    
 }
 
-function nextPosition(atualPosition){
+function possuiuRainha(atualPosition){
+    var retorno = false;
+    var posicao = document.getElementById(atualPosition);
 
+    if(posicao.childElementCount > 0){
+        retorno = true;
+    }
+    return retorno;
 }
