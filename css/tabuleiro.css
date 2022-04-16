@@ -1,0 +1,42 @@
+.menu{
+    margin: auto;
+    border: 1px solid black;
+    width: 1228px;
+    height: 200px;
+}
+
+.tabuleiro{
+    margin-top: 5px;
+    margin:auto;
+    border: 1px solid black;
+    width: 1228px;
+    height: 1200px;
+}
+
+.colunas{
+    display: inline-block;
+    width: 150px;
+}
+
+.celulas{
+    width: 150px;
+    height: 150px;
+}
+
+.celulaPretas{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+}
+
+.rainha{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+.button{
+    border-radius: 15px;
+    font-size: 50px; 
+    margin: 80px;
+}

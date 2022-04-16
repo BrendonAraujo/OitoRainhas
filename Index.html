@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>8 Rainhas</title>
+        <link href="css/tabuleiro.css" rel="stylesheet">
+        <script src="js/grasp.js"></script>
+    </head>
+    <body>
+        <div class="menu">
+            <button class="button" onclick="iniciar();">Iniciar posicionamento.</button>
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" id="r1">
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" name="r2">
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" name="r3">
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" name="r4">
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" name="r5">
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" name="r6">
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" name="r7">
+                <img src="img/Rainha.png.png" alt="Rainha" class="rainha" name="r8">
+        </div>
+        <div class="tabuleiro">
+            <div class="colunas">
+                <div id="1" class="celulaPretas" value="0">
+            
+                </div>
+                <div id="2" class="celulas" value="0">
+        
+                </div>
+                <div id="3" class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="4" class="celulas" value="0">
+                    
+                </div>
+                <div id="5" class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="6" class="celulas" value="0">
+                    
+                </div>
+                <div id="7" class="celulaPretas" value="0">
+
+                </div>
+                <div id="8" class="celulas" value="0">
+
+                </div>
+            </div>
+            <div class="colunas">
+                <div id="9" class="celulas" value="0">
+
+                </div>
+                <div id="10"class="celulaPretas" value="0">
+        
+                </div>
+                <div id="11" class="celulas" value="0">
+                    
+                </div>
+                <div id="12"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="13" class="celulas" value="0">
+                    
+                </div>
+                <div id="14"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="15" class="celulas" value="0">
+
+                </div>
+                <div id="16"class="celulaPretas" value="0">
+
+                </div>
+            </div>
+            <div class="colunas">
+                <div id="17"class="celulaPretas" value="0">
+
+                </div>
+                <div id="18" class="celulas" value="0">
+        
+                </div>
+                <div id="19"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="20" class="celulas" value="0">
+                    
+                </div>
+                <div id="21"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="22" class="celulas" value="0">
+                    
+                </div>
+                <div id="23"class="celulaPretas" value="0">
+
+                </div>
+                <div id="24" class="celulas" value="0">
+
+                </div>
+            </div>
+            <div class="colunas">
+                <div id="25" class="celulas" value="0">
+
+                </div>
+                <div id="26"class="celulaPretas" value="0">
+        
+                </div>
+                <div id="27" class="celulas" value="0">
+                    
+                </div>
+                <div id="28"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="29" class="celulas" value="0">
+                    
+                </div>
+                <div id="30"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="31" class="celulas" value="0">
+
+                </div>
+                <div id="32"class="celulaPretas" value="0">
+
+                </div>
+            </div>
+            <div class="colunas">
+                <div id="33"class="celulaPretas" value="0">
+
+                </div>
+                <div id="34" class="celulas" value="0">
+        
+                </div>
+                <div id="35"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="36" class="celulas" value="0">
+                    
+                </div>
+                <div id="37"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="38" class="celulas" value="0">
+                    
+                </div>
+                <div id="39"class="celulaPretas" value="0">
+
+                </div>
+                <div id="40" class="celulas" value="0">
+
+                </div>
+            </div>
+            <div class="colunas">
+                <div id="41" class="celulas" value="0">
+
+                </div>
+                <div id="42"class="celulaPretas" value="0">
+        
+                </div>
+                <div id="43" class="celulas" value="0">
+                    
+                </div>
+                <div id="44"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="45" class="celulas" value="0">
+                    
+                </div>
+                <div id="46"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="47" class="celulas" value="0">
+
+                </div>
+                <div id="48"class="celulaPretas" value="0">
+
+                </div>
+            </div>
+            <div class="colunas">
+                <div id="49"class="celulaPretas" value="0">
+
+                </div>
+                <div id="50" class="celulas" value="0">
+        
+                </div>
+                <div id="51"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="52" class="celulas" value="0">
+                    
+                </div>
+                <div id="53"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="54" class="celulas" value="0">
+                    
+                </div>
+                <div id="55"class="celulaPretas" value="0">
+
+                </div>
+                <div id="56" class="celulas" value="0">
+
+                </div>
+            </div>
+            <div class="colunas">
+                <div id="57" class="celulas" value="0">
+
+                </div>
+                <div id="58"class="celulaPretas" value="0">
+        
+                </div>
+                <div id="59" class="celulas" value="0">
+                    
+                </div>
+                <div id="60"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="61" class="celulas" value="0">
+                    
+                </div>
+                <div id="62"class="celulaPretas" value="0">
+                    
+                </div>
+                <div id="63" class="celulas" value="0">
+
+                </div>
+                <div id="64"class="celulaPretas" value="0">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
