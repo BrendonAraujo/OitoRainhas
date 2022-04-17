@@ -3,13 +3,27 @@ function iniciar(){
     var posicao;
     var quant_rainhas = 1;
 
-    posicao = Math.floor(Math.random() * (64 - 1) + 1);
-    receba = document.getElementById(posicao);
-    rainha = document.getElementById('r'+quant_rainhas);
-    receba.insertAdjacentElement("beforeend",rainha);
-    receba.setAttribute('value',1);
-    receba.style.border = "5px solid #fc0303";
-    marcaPosicao(posicao);
+    while (quant_rainhas < 3){
+        posicao = Math.floor(Math.random() * (64 - 1) + 1);
+        receba = document.getElementById(posicao);
+        if(!possuiuRainha(posicao)){
+            marcaPosicao(posicao);
+            rainha = document.getElementById('r'+quant_rainhas);
+            receba.insertAdjacentElement("beforeend",rainha);
+            receba.setAttribute('value',1);
+            quant_rainhas = quant_rainhas + 1;
+        }
+    }
+}
+
+function possuiuRainha(atualPosition){
+    var retorno = false;
+    var posicao = document.getElementById(atualPosition);
+
+    if(posicao.childElementCount > 0){
+        retorno = true;
+    }
+    return retorno;
 }
 
 function marcaPosicao(id){
@@ -18,12 +32,18 @@ function marcaPosicao(id){
     var diferencaDireita = 8 - coluna.getAttribute('value');
     var diferencaEsquerda = coluna.getAttribute('value') - 1;
     var celula;
-    var i = 1;
+    var i = coluna.getAttribute('firstElement');
     var colunaMarcada;
 
-
     // marca celulas na vertical
+    while (parseInt(i) <= parseInt(coluna.getAttribute('lastElement'))){
+        colunaMarcada = document.getElementById(i);
+        colunaMarcada.style.border = "5px solid #fc0303";
+        colunaMarcada.setAttribute('value',1);
+        i++; 
+    }
 
+    i = 1;
     //marca celuas na horizontal
     while (i <= 8){
         if(i < coluna.getAttribute('value')){
