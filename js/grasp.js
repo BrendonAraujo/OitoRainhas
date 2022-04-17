@@ -3,7 +3,7 @@ function iniciar(){
     var posicao;
     var quant_rainhas = 1;
 
-    posicao = 9//Math.floor(Math.random() * (64 - 1) + 1);
+    posicao = Math.floor(Math.random() * (64 - 1) + 1);
     receba = document.getElementById(posicao);
     rainha = document.getElementById('r'+quant_rainhas);
     receba.insertAdjacentElement("beforeend",rainha);
@@ -16,21 +16,27 @@ function marcaPosicao(id){
 
     var coluna = document.getElementById(id).parentNode;
     var diferencaDireita = 8 - coluna.getAttribute('value');
+    var diferencaEsquerda = coluna.getAttribute('value') - 1;
     var celula;
-    var i = coluna.getAttribute("firstElement");
-    var alterador;
+    var i = 1;
+    var colunaMarcada;
 
-    console.log(i);
-    console.log(coluna.getAttribute("lastElement"));
-    console.log(i >= coluna.getAttribute("lastElement"));
-    // marca ceculas verticais
-    while (i <= coluna.getAttribute("lastElement")){
-        celula = document.getElementById(i);
-        celula.style.border = "5px solid #fc0303";
-        celula.setAttribute('value',1);
+
+    // marca celulas na vertical
+
+    //marca celuas na horizontal
+    while (i <= 8){
+        if(i < coluna.getAttribute('value')){
+            colunaMarcada = document.getElementById(id - (8*diferencaEsquerda));
+            diferencaEsquerda = diferencaEsquerda - 1;
+        }else{
+            colunaMarcada = document.getElementById(id + (8*diferencaEsquerda));
+            diferencaEsquerda = diferencaEsquerda + 1;
+        }
+        colunaMarcada.style.border = "5px solid #fc0303";
+        colunaMarcada.setAttribute('value',1);
         i++;
     }
-
 
     // controla ajustes superiores
     if(id != coluna.getAttribute("firstElement")){
